@@ -11,7 +11,7 @@ public class GameTest {
 
     @Test
     public void testResultIsNotNull() {
-        Game game = new Game();
+        RPSGame game = new RPSGame();
         assertNotNull(game.play(0));
     }
 

@@ -9,14 +9,18 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".RockPaperScissors"
+            android:name=".RPS"
             android:label="Rock, Paper, Scissors">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <action android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
 
+        <activity
+            android:name=".RPSResult"
+            android:label="Rock, Paper, Scissors"
+            android:parentActivityName=".RPS">
         </activity>
 
     </application>

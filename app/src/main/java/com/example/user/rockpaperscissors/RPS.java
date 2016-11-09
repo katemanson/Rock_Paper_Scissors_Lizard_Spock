@@ -1,5 +1,6 @@
 package com.example.user.rockpaperscissors;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -11,13 +12,15 @@ import android.widget.TextView;
  * Created by user on 09/11/2016.
  */
 
-public class RockPaperScissors extends AppCompatActivity {
+public class RPS extends AppCompatActivity {
 
     TextView mInstruction;
     Button mRock;
     Button mPaper;
     Button mScissors;
-    TextView mResult;
+
+    RPSGame mGame = new RPSGame();
+    Intent mIntent = new Intent(RPS.this, RPSResult.class);
 
     @Override
     protected void onCreate (Bundle savedInstanceState) {
@@ -30,7 +33,6 @@ public class RockPaperScissors extends AppCompatActivity {
         mRock = (Button)findViewById(R.id.rock_button);
         mPaper = (Button)findViewById(R.id.paper_button);
         mScissors = (Button)findViewById(R.id.scissors_button);
-        mResult = (TextView)findViewById(R.id.result_text);
 
         mRock.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,9 +40,8 @@ public class RockPaperScissors extends AppCompatActivity {
 
                 Log.d("RockPaperScissors", "Rock button clicked");
 
-                Game game = new Game();
-                String result = game.play(0);
-                mResult.setText(result);
+                String result = mGame.play(0);
+                mIntent.putExtra("result", result);
 
             }
         });
@@ -50,10 +51,8 @@ public class RockPaperScissors extends AppCompatActivity {
             public void onClick(View view) {
 
                 Log.d("RockPaperScissors", "Paper button clicked");
-
-                Game game = new Game();
-                String result = game.play(1);
-                mResult.setText(result);
+                String result = mGame.play(1);
+                mIntent.putExtra("result", result);
 
             }
         });
@@ -63,16 +62,11 @@ public class RockPaperScissors extends AppCompatActivity {
             public void onClick(View view) {
 
                 Log.d("RockPaperScissors", "Scissors button clicked");
-
-                Game game = new Game();
-                String result = game.play(2);
-
-                mResult.setText(result);
+                String result = mGame.play(2);
+                mIntent.putExtra("result", result);
 
             }
         });
-
-
 
     }
 
