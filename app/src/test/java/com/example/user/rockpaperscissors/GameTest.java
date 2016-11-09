@@ -10,6 +10,9 @@ import org.junit.*;
 public class GameTest {
 
     @Test
-    public void test
+    public void testResultIsNotNull() {
+        Game game = new Game();
+        assertNotNull(game.play(0));
+    }
 
 }

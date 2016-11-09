@@ -1,6 +1,5 @@
 package com.example.user.rockpaperscissors;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -40,8 +39,7 @@ public class RockPaperScissors extends AppCompatActivity {
                 Log.d("RockPaperScissors", "Rock button clicked");
 
                 Game game = new Game();
-                String result = game.play("rock");
-                mResult = (TextView)findViewById(R.id.result_text);
+                String result = game.play(0);
                 mResult.setText(result);
 
             }
@@ -54,8 +52,7 @@ public class RockPaperScissors extends AppCompatActivity {
                 Log.d("RockPaperScissors", "Paper button clicked");
 
                 Game game = new Game();
-                String result = game.play("paper");
-                mResult = (TextView)findViewById(R.id.result_text);
+                String result = game.play(1);
                 mResult.setText(result);
 
             }
@@ -68,8 +65,8 @@ public class RockPaperScissors extends AppCompatActivity {
                 Log.d("RockPaperScissors", "Scissors button clicked");
 
                 Game game = new Game();
-                String result = game.play("scissors");
-                mResult = (TextView)findViewById(R.id.result_text);
+                String result = game.play(2);
+
                 mResult.setText(result);
 
             }
