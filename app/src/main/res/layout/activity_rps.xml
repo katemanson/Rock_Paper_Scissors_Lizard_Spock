@@ -4,8 +4,8 @@
     android:layout_height="fill_parent">
 
     <TextView
-        android:id="@+id/welcome_text"
-        android:text="@string/welcome_text"
+        android:id="@+id/instruction_text"
+        android:text="@string/instruction_text"
         android:textSize="30dp"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="50dp"
@@ -15,10 +15,10 @@
         android:fontFamily="casual" />
 
     <Button
-        android:id="@+id/rps_button"
-        android:text="Rock, Paper, Scissors"
+        android:id="@+id/rock_button"
+        android:text="Rock"
         android:textSize="25dp"
-        android:layout_width="500dp"
+        android:layout_width="150dp"
         android:layout_height="70dp"
         android:fontFamily="casual"
         android:layout_centerHorizontal="true"
@@ -27,28 +27,25 @@
         style="@android:style/Widget.Material.Light.Button.Inset" />
 
     <Button
-        android:id="@+id/rpsls_button"
-        android:text="Rock, Paper, Scissors, Lizard, Spock"
+        android:id="@+id/paper_button"
+        android:text="Paper"
         android:textSize="25dp"
-        android:layout_width="500dp"
+        android:layout_width="150dp"
         android:layout_height="70dp"
         android:fontFamily="casual"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="220dp"
         style="@android:style/Widget.Material.Light.Button.Inset" />
 
-    <TextView
-        android:id="@+id/rules_text"
-        android:text="@string/rules_text"
-        android:textSize="30dp"
-        android:textAlignment="center"
-        android:layout_marginTop="350dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginBottom="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <Button
+        android:id="@+id/scissors_button"
+        android:text="Scissors"
+        android:textSize="25dp"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:fontFamily="casual"
         android:layout_centerHorizontal="true"
-        android:fontFamily="casual" />
+        android:layout_marginTop="310dp"
+        style="@android:style/Widget.Material.Light.Button.Inset" />
 
 </RelativeLayout>

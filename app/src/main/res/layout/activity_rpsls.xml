@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TextView
+        android:id="@+id/instruction_text"
+        android:text="@string/instruction_text"
+        android:textSize="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="casual" />
+
+    <Button
+        android:id="@+id/rock_button"
+        android:text="Rock"
+        android:textSize="25dp"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:fontFamily="casual"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        style="@android:style/Widget.Material.Light.Button.Inset" />
+
+    <Button
+        android:id="@+id/paper_button"
+        android:text="Paper"
+        android:textSize="25dp"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:fontFamily="casual"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="170dp"
+        style="@android:style/Widget.Material.Light.Button.Inset" />
+
+    <Button
+        android:id="@+id/scissors_button"
+        android:text="Scissors"
+        android:textSize="25dp"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:fontFamily="casual"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="240dp"
+        style="@android:style/Widget.Material.Light.Button.Inset" />
+
+    <Button
+        android:id="@+id/lizard_button"
+        android:text="Lizard"
+        android:textSize="25dp"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:fontFamily="casual"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="310dp"
+        style="@android:style/Widget.Material.Light.Button.Inset" />
+
+    <Button
+        android:id="@+id/spock_button"
+        android:text="Spock"
+        android:textSize="25dp"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:fontFamily="casual"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="380dp"
+        style="@android:style/Widget.Material.Light.Button.Inset" />
+
+</RelativeLayout>

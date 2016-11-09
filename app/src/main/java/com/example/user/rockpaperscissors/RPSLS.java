@@ -12,27 +12,32 @@ import android.widget.TextView;
  * Created by user on 09/11/2016.
  */
 
-public class RPS extends AppCompatActivity {
+public class RPSLS extends AppCompatActivity {
 
     TextView mInstruction;
     Button mRock;
     Button mPaper;
     Button mScissors;
+    Button mLizard;
+    Button mSpock;
 
-    RPSGame mGame = new RPSGame();
-    Intent mIntent = new Intent(RPS.this, RPSResult.class);
+    RPSLSGame mGame = new RPSLSGame();
+    Intent mIntent = new Intent(RPSLS.this, RPSResult.class);
 
     @Override
     protected void onCreate (Bundle savedInstanceState) {
 
-        Log.d("RockPaperScissors", "RPS onCreate called");
+        Log.d("RockPaperScissors", "RPSLS onCreate called");
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_rpsls);
 
         mInstruction = (TextView)findViewById(R.id.instruction_text);
         mRock = (Button)findViewById(R.id.rock_button);
         mPaper = (Button)findViewById(R.id.paper_button);
         mScissors = (Button)findViewById(R.id.scissors_button);
+        mLizard = (Button)findViewById(R.id.lizard_button);
+        mSpock = (Button)findViewById(R.id.spock_button);
+
 
         mRock.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,7 +47,6 @@ public class RPS extends AppCompatActivity {
 
                 String result = mGame.play(0);
                 mIntent.putExtra("result", result);
-                startActivity(mIntent);
 
             }
         });
@@ -54,7 +58,6 @@ public class RPS extends AppCompatActivity {
                 Log.d("RockPaperScissors", "Paper button clicked");
                 String result = mGame.play(1);
                 mIntent.putExtra("result", result);
-                startActivity(mIntent);
 
             }
         });
@@ -66,11 +69,31 @@ public class RPS extends AppCompatActivity {
                 Log.d("RockPaperScissors", "Scissors button clicked");
                 String result = mGame.play(2);
                 mIntent.putExtra("result", result);
-                startActivity(mIntent);
+
+            }
+        });
+
+        mLizard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Log.d("RockPaperScissors", "Lizard button clicked");
+                String result = mGame.play(3);
+                mIntent.putExtra("result", result);
+
+            }
+        });
+
+        mSpock.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Log.d("RockPaperScissors", "Spock button clicked");
+                String result = mGame.play(4);
+                mIntent.putExtra("result", result);
 
             }
         });
 
     }
-
 }

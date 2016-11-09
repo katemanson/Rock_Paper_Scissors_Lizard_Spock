@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">RockPaperScissors</string>
     <string name="instruction_text">Make your choice...</string>
+    <string name="welcome_text">Choose a game...</string>
+    <string name="rules_text">Scissors cuts Paper covers Rock crushes Lizard poisons Spock smashes Scissors decapitates Lizard eats Paper disproves Spock vaporizes Rock crushes Scissors</string>
 </resources>

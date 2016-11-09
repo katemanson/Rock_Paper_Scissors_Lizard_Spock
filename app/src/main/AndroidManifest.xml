@@ -9,8 +9,8 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".RPS"
-            android:label="Rock, Paper, Scissors">
+            android:name=".Main"
+            android:label="Rock, Paper, Scissors (Lizard, Spock)">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <action android:name="android.intent.category.LAUNCHER"/>
@@ -18,9 +18,28 @@
         </activity>
 
         <activity
+            android:name=".RPS"
+            android:label="Rock, Paper, Scissors"
+            android:parentActivityName=".Main">
+        </activity>
+
+
+        <activity
             android:name=".RPSResult"
             android:label="Rock, Paper, Scissors"
             android:parentActivityName=".RPS">
+        </activity>
+
+        <activity
+            android:name=".RPSLS"
+            android:label="Rock, Paper, Scissors, Lizard, Spock"
+            android:parentActivityName=".Main">
+        </activity>
+
+        <activity
+            android:name=".RPSLSResult"
+            android:label="Rock, Paper, Scissors, Lizard, Spock"
+            android:parentActivityName=".RPSLS">
         </activity>
 
     </application>
