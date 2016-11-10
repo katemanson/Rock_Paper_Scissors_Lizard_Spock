@@ -23,10 +23,10 @@ public class RPSLSGame {
         // 0 = rock, 1 = paper, 2 = scissors, 3 = lizard, 4 = Spock
 
         String playerString = "";
-        if (playerChoice == 0) { playerString = "rock"; }
-        else if (playerChoice == 1) { playerString = "paper"; }
-        else if (playerChoice == 2) { playerString = "scissors"; }
-        else if (playerChoice == 3) { playerString = "lizard"; }
+        if (playerChoice == 0) { playerString = "Rock"; }
+        else if (playerChoice == 1) { playerString = "Paper"; }
+        else if (playerChoice == 2) { playerString = "Scissors"; }
+        else if (playerChoice == 3) { playerString = "Lizard"; }
         else if (playerChoice == 4) { playerString = "Spock"; }
         String resultPlayerChoice = "You chose " + playerString + ".";
 
