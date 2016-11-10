@@ -23,7 +23,7 @@ public class RPSResult extends AppCompatActivity {
         setContentView(R.layout.activity_rps_result);
 
         mResult = (TextView)findViewById(R.id.rps_result_text);
-        mCounts = (TextView)findViewById(R.id.rps_counts_text)
+        mCounts = (TextView)findViewById(R.id.rps_counts_text);
 
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();

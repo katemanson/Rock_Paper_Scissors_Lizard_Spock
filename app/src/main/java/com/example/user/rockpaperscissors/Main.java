@@ -3,6 +3,7 @@ package com.example.user.rockpaperscissors;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -26,10 +27,11 @@ public class Main extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mWelcome = (TextView)findViewById(R.id.welcome_text)
+        mWelcome = (TextView)findViewById(R.id.welcome_text);
         mRPS = (Button)findViewById(R.id.rps_button);
         mRPSLS = (Button)findViewById(R.id.rpsls_button);
         mRules = (TextView)findViewById(R.id.rules_text);
+        mRules.setMovementMethod(new ScrollingMovementMethod());
 
         mRPS.setOnClickListener(new View.OnClickListener() {
             @Override
