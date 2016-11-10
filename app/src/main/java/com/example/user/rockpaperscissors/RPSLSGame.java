@@ -13,9 +13,9 @@ public class RPSLSGame {
     int mDrawCount;
 
     public RPSLSGame() {
-        int mPlayerWinCount = 0;
-        int mPlayerLossCount = 0;
-        int mDrawCount = 0;
+        mPlayerWinCount = 0;
+        mPlayerLossCount = 0;
+        mDrawCount = 0;
     }
 
     public String play(int playerChoice){
@@ -28,22 +28,64 @@ public class RPSLSGame {
         else if (playerChoice == 2) { playerString = "scissors"; }
         else if (playerChoice == 3) { playerString = "lizard"; }
         else if (playerChoice == 4) { playerString = "Spock"; }
-
         String resultPlayerChoice = "You chose " + playerString + ".";
 
         Random randomThing = new Random();
         int randomChoice = randomThing.nextInt(5);
 
         String randomString = "";
-        if (randomChoice == 0) { randomString = "rock"; }
-        else if (randomChoice == 1) { randomString = "paper"; }
-        else if (randomChoice == 2) { randomString = "scissors"; }
-        else if (randomChoice == 3) { randomString = "lizard"; }
+        if (randomChoice == 0) { randomString = "Rock"; }
+        else if (randomChoice == 1) { randomString = "Paper"; }
+        else if (randomChoice == 2) { randomString = "Scissors"; }
+        else if (randomChoice == 3) { randomString = "Lizard"; }
         else if (randomChoice == 4) { randomString = "Spock"; }
+        String resultRandomChoice = "\nI chose " + randomString + ".";
 
-        String resultDraw = resultPlayerChoice + "\nI chose " + randomString + ". \nWe chose the same. \nIt's a draw.";
-        String resultLose = resultPlayerChoice + "\nI chose " + randomString + ". \nYou lose!";
-        String resultWin = resultPlayerChoice + "\nI chose " + randomString + ". \nYou win!";
+        String winReasoning = "";
+        if (playerChoice == 0 && randomChoice == 1 ||
+                playerChoice == 1 && randomChoice == 0) {
+            winReasoning = "\nPaper covers Rock.";
+        }
+        else if (playerChoice == 0 && randomChoice == 2 ||
+                playerChoice == 2 && randomChoice == 0) {
+            winReasoning = "\nRock crushes Scissors.";
+        }
+        else if (playerChoice == 0 && randomChoice == 3 ||
+                playerChoice == 3 && randomChoice == 0) {
+            winReasoning = "\nRock crushes Lizard.";
+        }
+        else if (playerChoice == 0 && randomChoice == 4 ||
+                playerChoice == 4 && randomChoice == 0) {
+            winReasoning = "\nSpock vaporizes Rock.";
+        }
+        else if (playerChoice == 1 && randomChoice == 2 ||
+                playerChoice == 2 && randomChoice == 1) {
+            winReasoning = "\nScissors cuts Paper.";
+        }
+        else if (playerChoice == 1 && randomChoice == 3 ||
+                playerChoice == 3 && randomChoice == 1) {
+            winReasoning = "\nLizard eats Paper.";
+        }
+        else if (playerChoice == 1 && randomChoice == 4 ||
+                playerChoice == 4 && randomChoice == 1) {
+            winReasoning = "\nPaper disproves Spock.";
+        }
+        else if (playerChoice == 2 && randomChoice == 3 ||
+                playerChoice == 3 && randomChoice == 2) {
+            winReasoning = "\nScissors decapitates Lizard.";
+        }
+        else if (playerChoice == 2 && randomChoice == 4 ||
+                playerChoice == 4 && randomChoice == 2) {
+            winReasoning = "\nSpock smashes scissors.";
+        }
+        else if (playerChoice == 3 && randomChoice == 4 ||
+                playerChoice == 4 && randomChoice == 3) {
+            winReasoning = "\nLizard poisons Spock.";
+        }
+
+        String resultDraw = resultPlayerChoice + resultRandomChoice + "\n\nIt's a draw.";
+        String resultLose = resultPlayerChoice + resultRandomChoice + winReasoning + "\n\nYou lose!";
+        String resultWin = resultPlayerChoice + resultRandomChoice + winReasoning + "\n\nYou win!";
 
         String result = "";
         if (playerChoice == randomChoice) {

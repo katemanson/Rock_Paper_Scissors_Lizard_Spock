@@ -23,23 +23,37 @@ public class RPSGame {
             // 0 = rock, 1 = paper, 2 = scissors
 
             String playerString = "";
-            if (playerChoice == 0) { playerString = "rock"; }
-            else if (playerChoice == 1) { playerString = "paper"; }
-            else if (playerChoice == 2) { playerString = "scissors"; }
-
+            if (playerChoice == 0) { playerString = "Rock"; }
+            else if (playerChoice == 1) { playerString = "Paper"; }
+            else if (playerChoice == 2) { playerString = "Scissors"; }
             String resultPlayerChoice = "You chose " + playerString + ".";
 
             Random randomThing = new Random();
             int randomChoice = randomThing.nextInt(3);
 
             String randomString = "";
-            if (randomChoice == 0) { randomString = "rock"; }
-            else if (randomChoice == 1) { randomString = "paper"; }
-            else if (randomChoice == 2) { randomString = "scissors"; }
+            if (randomChoice == 0) { randomString = "Rock"; }
+            else if (randomChoice == 1) { randomString = "Paper"; }
+            else if (randomChoice == 2) { randomString = "Scissors"; }
+            String resultRandomChoice = "\nI chose " + randomString + ".";
 
-            String resultDraw = resultPlayerChoice + "\nI chose " + randomString + ". \nWe chose the same. \nIt's a draw.";
-            String resultLose = resultPlayerChoice + "\nI chose " + randomString + ". \nYou lose!";
-            String resultWin = resultPlayerChoice + "\nI chose " + randomString + ". \nYou win!";
+            String winReasoning = "";
+            if (playerChoice == 0 && randomChoice == 1 ||
+                playerChoice == 1 && randomChoice == 0) {
+                winReasoning = "\nPaper covers Rock.";
+            }
+            else if (playerChoice == 0 && randomChoice == 2 ||
+                    playerChoice == 2 && randomChoice == 0) {
+                     winReasoning = "\nRock crushes Scissors.";
+            }
+            else if (playerChoice == 1 && randomChoice == 2 ||
+                    playerChoice == 2 && randomChoice == 1) {
+                    winReasoning = "\nScissors cuts Paper.";
+            }
+
+            String resultDraw = resultPlayerChoice + resultRandomChoice + "\n\nIt's a draw.";
+            String resultLose = resultPlayerChoice + resultRandomChoice + winReasoning + "\n\nYou lose!";
+            String resultWin = resultPlayerChoice + resultRandomChoice + winReasoning + "\n\nYou win!";
 
             String result = "";
             if (playerChoice == randomChoice) {
