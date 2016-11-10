@@ -41,7 +41,9 @@ public class RPS extends AppCompatActivity {
                 Log.d("RockPaperScissors", "Rock button clicked");
 
                 String result = mGame.play(0);
+                int countsText = mGame.getCountsText();
                 mIntent.putExtra("result", result);
+                mIntent.putExtra("countsText", countsText);
                 startActivity(mIntent);
 
             }
@@ -53,7 +55,9 @@ public class RPS extends AppCompatActivity {
 
                 Log.d("RockPaperScissors", "Paper button clicked");
                 String result = mGame.play(1);
+                int countsText = mGame.getCountsText();
                 mIntent.putExtra("result", result);
+                mIntent.putExtra("countsText", countsText);
                 startActivity(mIntent);
 
             }
@@ -65,7 +69,9 @@ public class RPS extends AppCompatActivity {
 
                 Log.d("RockPaperScissors", "Scissors button clicked");
                 String result = mGame.play(2);
+                int countsText = mGame.getCountsText();
                 mIntent.putExtra("result", result);
+                mIntent.putExtra("countsText", countsText);
                 startActivity(mIntent);
 
             }

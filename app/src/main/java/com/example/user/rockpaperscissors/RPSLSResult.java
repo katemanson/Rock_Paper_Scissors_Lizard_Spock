@@ -13,6 +13,7 @@ import android.widget.TextView;
 public class RPSLSResult extends AppCompatActivity {
 
     TextView mResult;
+    TextView mCounts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,12 +23,16 @@ public class RPSLSResult extends AppCompatActivity {
         setContentView(R.layout.activity_rps_result);
 
         mResult = (TextView)findViewById(R.id.rps_result_text);
+        mCounts = (TextView)findViewById(R.id.rps_counts_text);
 
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
 
         String result = extras.getString("result");
         mResult.setText(result);
+
+        String countsText = extras.getString("countsText");
+        mCounts.setText(countsText);
 
     }
 

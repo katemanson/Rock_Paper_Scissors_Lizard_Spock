@@ -8,6 +8,10 @@ import java.util.Random;
 
 public class RPSLSGame {
 
+    int mPlayerWinCount = 0;
+    int mPlayerLossCount = 0;
+    int mDrawCount = 0;
+
     public String play(int playerChoice){
 
         // 0 = rock, 1 = paper, 2 = scissors, 3 = lizard, 4 = Spock
@@ -30,6 +34,7 @@ public class RPSLSGame {
         if (playerChoice == randomChoice) {
 
             result = resultDraw;
+            mDrawCount++;
         }
         else if (playerChoice == 0 && randomChoice == 1 ||
                 playerChoice == 0 && randomChoice == 4 ||
@@ -43,6 +48,7 @@ public class RPSLSGame {
                 playerChoice == 4 && randomChoice == 3 ) {
 
             result = resultLose;
+            mPlayerLossCount++;
         }
         else if (playerChoice == 0 && randomChoice == 2 ||
                 playerChoice == 0 && randomChoice == 3 ||
@@ -56,8 +62,26 @@ public class RPSLSGame {
                 playerChoice == 4 && randomChoice == 2 ) {
 
             result = resultWin;
+            mPlayerWinCount++;
         }
         return result;
+    }
 
+    public int getPlayerWinCount() {
+        return mPlayerWinCount;
+    }
+
+    public int getPlayerLossCount() {
+        return mPlayerLossCount;
+    }
+
+    public int getDrawCount() {
+        return mDrawCount;
+    }
+
+    public String getCountsText (){
+        return "So far, you have " + mPlayerWinCount + " wins, " +
+                "\nI have " + mPlayerLossCount + " ," +
+                "\nand there have been " + mDrawCount + " draws";
     }
 }
