@@ -8,13 +8,28 @@ import java.util.Random;
 
 public class RPSLSGame {
 
-    int mPlayerWinCount = 0;
-    int mPlayerLossCount = 0;
-    int mDrawCount = 0;
+    int mPlayerWinCount;
+    int mPlayerLossCount;
+    int mDrawCount;
+
+    public RPSLSGame() {
+        int mPlayerWinCount = 0;
+        int mPlayerLossCount = 0;
+        int mDrawCount = 0;
+    }
 
     public String play(int playerChoice){
 
         // 0 = rock, 1 = paper, 2 = scissors, 3 = lizard, 4 = Spock
+
+        String playerString = "";
+        if (playerChoice == 0) { playerString = "rock"; }
+        else if (playerChoice == 1) { playerString = "paper"; }
+        else if (playerChoice == 2) { playerString = "scissors"; }
+        else if (playerChoice == 3) { playerString = "lizard"; }
+        else if (playerChoice == 4) { playerString = "Spock"; }
+
+        String resultPlayerChoice = "You chose " + playerString + ".";
 
         Random randomThing = new Random();
         int randomChoice = randomThing.nextInt(5);
@@ -26,9 +41,9 @@ public class RPSLSGame {
         else if (randomChoice == 3) { randomString = "lizard"; }
         else if (randomChoice == 4) { randomString = "Spock"; }
 
-        String resultDraw = "I chose " + randomString + ". \nYou chose the same. \nIt's a draw.";
-        String resultLose = "I chose " + randomString + ". \nYou lose!";
-        String resultWin = "I chose " + randomString + ". \nYou win!";
+        String resultDraw = resultPlayerChoice + "\nI chose " + randomString + ". \nWe chose the same. \nIt's a draw.";
+        String resultLose = resultPlayerChoice + "\nI chose " + randomString + ". \nYou lose!";
+        String resultWin = resultPlayerChoice + "\nI chose " + randomString + ". \nYou win!";
 
         String result = "";
         if (playerChoice == randomChoice) {
@@ -67,21 +82,26 @@ public class RPSLSGame {
         return result;
     }
 
-    public int getPlayerWinCount() {
-        return mPlayerWinCount;
-    }
+    public String getCountsText() {
 
-    public int getPlayerLossCount() {
-        return mPlayerLossCount;
-    }
+        String winSingPlural;
+        if (mPlayerWinCount == 1) { winSingPlural = "win"; }
+        else { winSingPlural = "wins"; }
 
-    public int getDrawCount() {
-        return mDrawCount;
-    }
+        String lossSingPlural;
+        if (mPlayerLossCount == 1) { lossSingPlural = "win"; }
+        else { lossSingPlural = "wins"; }
 
-    public String getCountsText (){
-        return "So far, you have " + mPlayerWinCount + " wins, " +
-                "\nI have " + mPlayerLossCount + " ," +
-                "\nand there have been " + mDrawCount + " draws";
+        String drawHasHave;
+        if (mDrawCount == 1) { drawHasHave = "has"; }
+        else { drawHasHave = "have"; }
+
+        String drawSingPlural;
+        if (mDrawCount == 1) { drawSingPlural = "draw"; }
+        else { drawSingPlural = "draws"; }
+
+        return "You have: " + mPlayerWinCount + " " + winSingPlural +
+                "\nI have: " + mPlayerLossCount + " " + lossSingPlural +
+                "\nThere " + drawHasHave + " been: " + mDrawCount + " " + drawSingPlural;
     }
 }

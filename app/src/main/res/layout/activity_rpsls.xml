@@ -6,67 +6,67 @@
     <TextView
         android:id="@+id/instruction_text"
         android:text="@string/instruction_text"
-        android:textSize="30dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="30dp"
+        android:textSize="30sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:fontFamily="casual" />
+        android:fontFamily="casual"/>
 
     <Button
         android:id="@+id/rock_button"
-        android:text="Rock"
-        android:textSize="25dp"
+        android:text="@string/rock"
+        android:textSize="25sp"
         android:layout_width="150dp"
         android:layout_height="70dp"
         android:fontFamily="casual"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        style="@android:style/Widget.Material.Light.Button.Inset" />
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/instruction_text"/>
 
     <Button
         android:id="@+id/paper_button"
-        android:text="Paper"
-        android:textSize="25dp"
+        android:text="@string/paper"
+        android:textSize="25sp"
         android:layout_width="150dp"
         android:layout_height="70dp"
         android:fontFamily="casual"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="170dp"
-        style="@android:style/Widget.Material.Light.Button.Inset" />
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/rock_button"/>
 
     <Button
         android:id="@+id/scissors_button"
-        android:text="Scissors"
-        android:textSize="25dp"
+        android:text="@string/scissors"
+        android:textSize="25sp"
         android:layout_width="150dp"
         android:layout_height="70dp"
         android:fontFamily="casual"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="240dp"
-        style="@android:style/Widget.Material.Light.Button.Inset" />
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/paper_button"/>
 
     <Button
         android:id="@+id/lizard_button"
-        android:text="Lizard"
-        android:textSize="25dp"
+        android:text="@string/lizard"
+        android:textSize="25sp"
         android:layout_width="150dp"
         android:layout_height="70dp"
         android:fontFamily="casual"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="310dp"
-        style="@android:style/Widget.Material.Light.Button.Inset" />
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/scissors_button"/>
 
     <Button
         android:id="@+id/spock_button"
-        android:text="Spock"
-        android:textSize="25dp"
+        android:text="@string/spock"
+        android:textSize="25sp"
         android:layout_width="150dp"
         android:layout_height="70dp"
         android:fontFamily="casual"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="380dp"
-        style="@android:style/Widget.Material.Light.Button.Inset" />
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/lizard_button"/>
 
 </RelativeLayout>

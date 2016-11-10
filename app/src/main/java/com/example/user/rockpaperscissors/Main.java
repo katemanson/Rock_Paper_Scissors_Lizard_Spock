@@ -17,8 +17,9 @@ public class Main extends AppCompatActivity {
 
     TextView mWelcome;
     Button mRPS;
+    TextView mRPSRules;
     Button mRPSLS;
-    TextView mRules;
+    TextView mRPSLSRules;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,16 +30,18 @@ public class Main extends AppCompatActivity {
 
         mWelcome = (TextView)findViewById(R.id.welcome_text);
         mRPS = (Button)findViewById(R.id.rps_button);
+        mRPSRules = (TextView)findViewById(R.id.rps_rules_text);
         mRPSLS = (Button)findViewById(R.id.rpsls_button);
-        mRules = (TextView)findViewById(R.id.rules_text);
-        mRules.setMovementMethod(new ScrollingMovementMethod());
+        mRPSLSRules = (TextView)findViewById(R.id.rpsls_rules_text);
+
+        mRPSRules.setMovementMethod(new ScrollingMovementMethod());
+        mRPSLSRules.setMovementMethod(new ScrollingMovementMethod());
 
         mRPS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 Log.d("RockPaperScissors", "Rock, Paper, Scissors button clicked");
-
                 Intent intentRPS = new Intent(Main.this, RPS.class);
                 startActivity(intentRPS);
 
@@ -56,9 +59,6 @@ public class Main extends AppCompatActivity {
 
             }
         });
-
-
-
 
     }
 

@@ -22,7 +22,7 @@ public class RPSLS extends AppCompatActivity {
     Button mSpock;
 
     RPSLSGame mGame = new RPSLSGame();
-    Intent mIntent = new Intent(RPSLS.this, RPSResult.class);
+    Intent mIntent;
 
     @Override
     protected void onCreate (Bundle savedInstanceState) {
@@ -47,6 +47,7 @@ public class RPSLS extends AppCompatActivity {
 
                 String result = mGame.play(0);
                 String countsText = mGame.getCountsText();
+                mIntent = new Intent(RPSLS.this, RPSResult.class);
                 mIntent.putExtra("result", result);
                 mIntent.putExtra("countsText", countsText);
                 startActivity(mIntent);
@@ -62,6 +63,7 @@ public class RPSLS extends AppCompatActivity {
 
                 String result = mGame.play(1);
                 String countsText = mGame.getCountsText();
+                mIntent = new Intent(RPSLS.this, RPSResult.class);
                 mIntent.putExtra("result", result);
                 mIntent.putExtra("countsText", countsText);
                 startActivity(mIntent);
@@ -77,6 +79,7 @@ public class RPSLS extends AppCompatActivity {
 
                 String result = mGame.play(2);
                 String countsText = mGame.getCountsText();
+                mIntent = new Intent(RPSLS.this, RPSResult.class);
                 mIntent.putExtra("result", result);
                 mIntent.putExtra("countsText", countsText);
                 startActivity(mIntent);
@@ -92,6 +95,7 @@ public class RPSLS extends AppCompatActivity {
 
                 String result = mGame.play(3);
                 String countsText = mGame.getCountsText();
+                mIntent = new Intent(RPSLS.this, RPSResult.class);
                 mIntent.putExtra("result", result);
                 mIntent.putExtra("countsText", countsText);
                 startActivity(mIntent);
@@ -106,6 +110,7 @@ public class RPSLS extends AppCompatActivity {
                 Log.d("RockPaperScissors", "Spock button clicked");
                 String result = mGame.play(4);
                 String countsText = mGame.getCountsText();
+                mIntent = new Intent(RPSLS.this, RPSResult.class);
                 mIntent.putExtra("result", result);
                 mIntent.putExtra("countsText", countsText);
                 startActivity(mIntent);

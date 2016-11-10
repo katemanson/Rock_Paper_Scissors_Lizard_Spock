@@ -20,14 +20,14 @@ public class RPS extends AppCompatActivity {
     Button mScissors;
 
     RPSGame mGame = new RPSGame();
-    Intent mIntent = new Intent(RPS.this, RPSResult.class);
+    Intent mIntent;
 
     @Override
     protected void onCreate (Bundle savedInstanceState) {
 
         Log.d("RockPaperScissors", "RPS onCreate called");
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_rps);
 
         mInstruction = (TextView)findViewById(R.id.instruction_text);
         mRock = (Button)findViewById(R.id.rock_button);
@@ -42,6 +42,7 @@ public class RPS extends AppCompatActivity {
 
                 String result = mGame.play(0);
                 String countsText = mGame.getCountsText();
+                mIntent = new Intent(RPS.this, RPSResult.class);
                 mIntent.putExtra("result", result);
                 mIntent.putExtra("countsText", countsText);
                 startActivity(mIntent);
@@ -56,6 +57,7 @@ public class RPS extends AppCompatActivity {
                 Log.d("RockPaperScissors", "Paper button clicked");
                 String result = mGame.play(1);
                 String countsText = mGame.getCountsText();
+                mIntent = new Intent(RPS.this, RPSResult.class);
                 mIntent.putExtra("result", result);
                 mIntent.putExtra("countsText", countsText);
                 startActivity(mIntent);
@@ -70,6 +72,7 @@ public class RPS extends AppCompatActivity {
                 Log.d("RockPaperScissors", "Scissors button clicked");
                 String result = mGame.play(2);
                 String countsText = mGame.getCountsText();
+                mIntent = new Intent(RPS.this, RPSResult.class);
                 mIntent.putExtra("result", result);
                 mIntent.putExtra("countsText", countsText);
                 startActivity(mIntent);

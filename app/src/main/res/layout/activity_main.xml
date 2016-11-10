@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
     <TextView
         android:id="@+id/welcome_text"
         android:text="@string/welcome_text"
-        android:textSize="30dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="50dp"
+        android:textSize="25sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -16,45 +17,67 @@
 
     <Button
         android:id="@+id/rps_button"
-        android:text="Rock, Paper, Scissors"
-        android:textSize="25dp"
+        android:text="@string/rock_paper_scissors"
+        android:textSize="25sp"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:fontFamily="casual"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="110dp"
-        android:layout_marginBottom="50dp"
-        android:layout_marginLeft="25dp"
+        android:layout_marginTop="5dp"
         android:layout_marginRight="25dp"
-        style="@android:style/Widget.Material.Light.Button.Inset" />
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="25dp"
+        android:layout_below="@+id/welcome_text"
+        style="@style/Widget.AppCompat.Button" />
+
+    <TextView
+        android:id="@+id/rps_rules_text"
+        android:text="@string/rps_rules_text"
+        android:fontFamily="casual"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:maxLines="8"
+        android:scrollbars="vertical"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:isScrollContainer="true"
+        android:layout_below="@+id/rps_button" />
 
     <Button
         android:id="@+id/rpsls_button"
-        android:text="Rock, Paper, Scissors, Lizard, Spock"
-        android:textSize="25dp"
+        android:text="@string/rock_paper_scissors_lizard_spock"
+        android:textSize="25sp"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:fontFamily="casual"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="220dp"
-        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="25dp"
-        style="@android:style/Widget.Material.Light.Button.Inset" />
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="25dp"
+        android:layout_below="@+id/rps_rules_text" />
 
     <TextView
-        android:id="@+id/rules_text"
-        android:text="@string/rules_text"
-        android:textSize="25dp"
-        android:textAlignment="center"
-        android:layout_marginTop="350dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginBottom="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_width="wrap_content"
+        android:id="@+id/rpsls_rules_text"
+        android:text="@string/rpsls_rules_text"
+        android:fontFamily="casual"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:fontFamily="casual"
-        android:maxLines="3"
-        android:scrollbars="vertical"/>
+        android:maxLines="8"
+        android:scrollbars="vertical"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:isScrollContainer="true"
+        android:layout_below="@+id/rpsls_button" />
 
 </RelativeLayout>

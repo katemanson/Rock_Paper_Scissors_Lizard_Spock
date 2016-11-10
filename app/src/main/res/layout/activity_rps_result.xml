@@ -7,27 +7,30 @@
     <TextView
         android:id="@+id/rps_result_text"
         android:text=""
-        android:textSize="30dp"
+        android:textSize="25sp"
+        android:textAlignment="center"
         android:fontFamily="casual"
         android:layout_marginTop="50dp"
         android:layout_marginRight="25dp"
-        android:layout_marginBottom="25dp"
         android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"/>
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/rps_counts_text"
         android:text=""
-        android:textSize="30dp"
+        android:textSize="25sp"
         android:fontFamily="casual"
-        android:layout_marginTop="100dp"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="25dp"
         android:layout_marginBottom="25dp"
         android:layout_marginLeft="25dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/rps_result_text"/>
 
 </RelativeLayout>

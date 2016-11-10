@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">RockPaperScissors</string>
-    <string name="instruction_text">Make your choice...</string>
-    <string name="welcome_text">Choose a game...</string>
-    <string name="rules_text">Scissors cuts Paper covers Rock crushes Lizard poisons Spock smashes Scissors decapitates Lizard eats Paper disproves Spock vaporizes Rock crushes Scissors</string>
+    <string name="instruction_text">Choose...</string>
+    <string name="welcome_text">Choose...</string>
+    <string name="rps_rules_text">Scissors cuts Paper covers Rock crushes Scissors </string>
+    <string name="rpsls_rules_text">Scissors cuts Paper covers Rock crushes Lizard poisons Spock smashes Scissors decapitates Lizard eats Paper disproves Spock vaporizes Rock crushes Scissors</string>
+    <string name="rock_paper_scissors">Rock, Paper, Scissors</string>
+    <string name="rock_paper_scissors_lizard_spock">Rock, Paper, Scissors, Lizard, Spock</string>
+    <string name="rock">Rock</string>
+    <string name="paper">Paper</string>
+    <string name="scissors">Scissors</string>
+    <string name="lizard">Lizard</string>
+    <string name="spock">Spock</string>
 </resources>
