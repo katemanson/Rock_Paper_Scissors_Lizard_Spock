@@ -2,9 +2,11 @@
 
 ##Summary
 
-This started out as a pair programming lab exercise from Week 7 of the immersive coding course at [CodeClan](https://codeclan.com/). I later refactored and extended it a bit; it's one of the first apps I made in Android Studio.
+This started out as a pair programming lab exercise from Week 7 of the immersive coding course at [CodeClan](https://codeclan.com/). 
 
-* The user can choose to play either Rock, Paper, Scissors or Rock, Paper, Scissors, Lizard, Spock against the app. (The Lizard, Spock version became well known after it was [Sheldon Coopered](https://www.youtube.com/watch?v=iSHPVCBsnLw), but apparently came about quite a while before that; the originator, Sam Kass, has a [page about it](http://www.samkass.com/theories/RPSSL.html).)
+I later refactored and extended it a bit; it's one of the first apps I made in Android Studio.
+
+* The user can choose to play either 'Rock, Paper, Scissors' or 'Rock, Paper, Scissors, Lizard, Spock' against the app. (The 'Lizard, Spock' version became well known after it was [Sheldon Coopered](https://www.youtube.com/watch?v=iSHPVCBsnLw), but apparently came about quite a while before that; the originator, Sam Kass, has a [page about it](http://www.samkass.com/theories/RPSSL.html).)
 * The user chooses their weapon; so does the app. 
 * Wins, losses and draws are counted. 
 
@@ -14,7 +16,7 @@ This started out as a pair programming lab exercise from Week 7 of the immersive
 * Java in Android Studio
 
 ##Highlights
-* Apart from making the Lizard, Spock version... realising the core game logic could be simplified:
+* Apart from making the 'Lizard, Spock' version? Realising the core game logic could be simplified:
 ```
 public String play(int playerChoice){
 
